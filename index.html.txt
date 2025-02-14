@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style 4.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Sujal Shah</span></h1>
+            <p>Creative Developer | Designer | Innovator</p>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A passionate AI & ML student studying at Sanjay Ghodawat University , Kolhapur . 
+          Grasping Skills | Enthusiastic Learner | Creative Mind | Portrait Artist |</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <p>HTML</p>
+            <div class="progress" style="width: 90%"></div>
+        </div>
+        <div class="skill-bar">
+            <p>CSS</p>
+            <div class="progress" style="width: 85%"></div>
+        </div>
+        <div class="skill-bar">
+            <p>JavaScript</p>
+            <div class="progress" style="width: 75%"></div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <p>Degree in Computer Science, Sanjay Ghodawat University, Kolhapur</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Project 1 - Description</p>
+        <p>Project 2 - Description</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Sujal Shah. All rights reserved.</p>
+    </footer>
+</body>
+</html>
