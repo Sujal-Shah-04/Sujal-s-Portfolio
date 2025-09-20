@@ -1,7 +1,6 @@
-/* Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
-/* Root theme variables */
 :root {
   color-scheme: dark light;
   --bg-color: #0f1117;
@@ -44,7 +43,6 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header */
 header {
   background-color: var(--nav-bg);
   padding: 1rem 2rem;
@@ -82,7 +80,6 @@ header {
   color: var(--accent-color);
 }
 
-/* Toggle Switch */
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
@@ -153,7 +150,6 @@ input:checked + .slider:before {
   50% { border-color: var(--accent-color); }
 }
 
-/* Sections */
 section {
   padding: 4rem 2rem;
   text-align: center;
@@ -165,8 +161,6 @@ section {
   color: var(--accent-color);
 }
 
-/* Home Card */
-/* Home Section */
 #home {
     display: flex;
     justify-content: center;
@@ -249,9 +243,6 @@ section {
     color: #fff;
   }
   
-
-  
-/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -291,19 +282,16 @@ section {
     font-weight: 600;
   }
   
-
-/* Project Previews */
 .project iframe {
   width: 100%;
-  max-width: 800px;
-  height: 400px;
+  max-width: 1200px;
+  height: 600px;
   border: none;
   margin-top: 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Contact Form */
 .contact-code-section {
     padding: 80px 20px;
     background: #0e0e0e;
@@ -410,9 +398,6 @@ section {
     box-shadow: 0 0 15px #00ffcc;
   }
 
-
-
-/* Footer */
 footer {
   background-color: var(--footer-bg);
   padding: 1rem;
@@ -484,7 +469,6 @@ footer {
     margin-bottom: 0.5rem;
   }
   
-  /* Animation */
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -502,7 +486,7 @@ footer {
     }
   }
   
-  /* Education Section */
+
 .education-section {
   padding: 4rem 2rem;
   background-color: var(--bg-color);
@@ -562,7 +546,7 @@ footer {
   border-right: 2px solid var(--accent-color);
 }
 
-/* Optional: one-time typewriter animation */
+
 @keyframes type {
   from { width: 0; }
   to { width: 100%; }
@@ -674,4 +658,3 @@ footer {
     font-weight: bold;
   }
 
-  

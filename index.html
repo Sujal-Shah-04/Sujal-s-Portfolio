@@ -140,46 +140,79 @@
     <h2>Projects</h2>
     <div class="project">
       <p>🎯 Project 1 - Car Showroom Website</p>
-      <iframe src="https://your-github-live-site-1.vercel.app" loading="lazy"></iframe>
+      <iframe src="https://car-showroom-gamma.vercel.app/" loading="lazy"></iframe>
     </div>
     <div class="project">
-      <p>🎯 Project 2 - Quiz App</p>
-      <iframe src="https://your-github-live-site-2.vercel.app" loading="lazy"></iframe>
+      <p>🎯 Project 2 - Construction Company Website</p>
+      <iframe src="https://construction-company-phi.vercel.app/" loading="lazy"></iframe>
     </div>
   </section>
 
-  <section id="contact" class="contact-code-section">
-    <h2 class="section-title">📬 Let's Collaborate</h2>
+<section id="contact" class="contact-code-section">
+  <h2 class="section-title">📬 Let's Collaborate</h2>
+
   
-    <form class="code-card">
-      <div class="code-header">
-        <span class="circle red"></span>
-        <span class="circle yellow"></span>
-        <span class="circle green"></span>
-        <span class="file-name">contact.js</span>
+  <form id="contact-form" class="code-card">
+    <div class="code-header">
+      <span class="circle red"></span>
+      <span class="circle yellow"></span>
+      <span class="circle green"></span>
+      <span class="file-name">contact.js</span>
+    </div>
+
+    <div class="code-content">
+      <div class="code-line"><span class="line-num">1</span> <span class="keyword">const</span> contact = &#123;</div>
+      <div class="code-line">
+        <span class="line-num">2</span>
+        &nbsp;&nbsp;<span class="key">name</span>: "<input type="text" name="name" placeholder="Your Name" required>", 
       </div>
-  
-      <div class="code-content">
-        <div class="code-line"><span class="line-num">1</span> <span class="keyword">const</span> contact = &#123;</div>
-        <div class="code-line">
-          <span class="line-num">2</span>
-          &nbsp;&nbsp;<span class="key">name</span>: "<input type="text" name="name" placeholder="Your Name" required>", 
-        </div>
-        <div class="code-line">
-          <span class="line-num">3</span>
-          &nbsp;&nbsp;<span class="key">email</span>: "<input type="email" name="email" placeholder="your@email.com" required>", 
-        </div>
-        <div class="code-line">
-          <span class="line-num">4</span>
-          &nbsp;&nbsp;<span class="key">message</span>: "<textarea name="message" placeholder="Let’s build something awesome!" required></textarea>",
-        </div>
-        <div class="code-line"><span class="line-num">5</span> &#125;;</div>
+      <div class="code-line">
+        <span class="line-num">3</span>
+        &nbsp;&nbsp;<span class="key">email</span>: "<input type="email" name="email" placeholder="your@email.com" required>", 
       </div>
-  
-      <button type="submit" class="send-btn">🚀 Send</button>
-    </form>
-  </section>
-  
+      <div class="code-line">
+        <span class="line-num">4</span>
+        &nbsp;&nbsp;<span class="key">message</span>: "<textarea name="message" placeholder="Let’s build something awesome!" required></textarea>",
+      </div>
+      <div class="code-line"><span class="line-num">5</span> &#125;;</div>
+    </div>
+
+    <button type="submit" class="send-btn">🚀 Send</button>
+    <button type="button" id="clear-btn" class="send-btn" style="background:#444;">🧹 Clear</button>
+
+    <!-- Console-style response message -->
+    <div id="console-response" class="code-line" style="display:none; margin-top:10px; color:lime;">
+      <span class="line-num">6</span> <span class="keyword">console</span>.log('<span id="response-text"></span>');
+    </div>
+  </form>
+</section>
+
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+      emailjs.init("bwqvaPQiteOihXm8V"); 
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_yt6sfjc', 'template_dhsz9jy', this)
+        .then(function() {
+            document.getElementById('response-text').innerText = "✅ Message sent successfully!";
+            document.getElementById('console-response').style.display = "block";
+        }, function(error) {
+            document.getElementById('response-text').innerText = "❌ Error: " + JSON.stringify(error);
+            document.getElementById('console-response').style.display = "block";
+        });
+  });
+
+  document.getElementById('clear-btn').addEventListener('click', function() {
+      document.getElementById('contact-form').reset();
+      document.getElementById('console-response').style.display = "none";
+  });
+</script>
+
   <footer>
     <p>&copy; 2025 Sujal Shah. All rights reserved.</p>
   </footer>
